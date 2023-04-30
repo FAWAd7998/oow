@@ -167,10 +167,19 @@ class signin extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        child: const Text(
-                          'FORGOT PASSWORD?',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.blue),
+                        child: MaterialButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => forgot()),
+                            );
+                          },
+                          child: const Text(
+                            'Forgot Password',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                          ),
                         ),
                       ),
                       Container(
